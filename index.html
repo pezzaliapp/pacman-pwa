@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pac-Man PWA</title>
+  <title>Pac-Man PWA - Avanzato</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <canvas id="gameCanvas" width="560" height="620"></canvas>
+  <!-- Canvas aggiornato per il labirinto: 9 colonne x 32px = 288, 7 righe x 32px = 224 -->
+  <canvas id="gameCanvas" width="288" height="224"></canvas>
   <script src="game.js"></script>
   <script>
-    // Registrazione del service worker
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('service-worker.js')
